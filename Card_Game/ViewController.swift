@@ -34,6 +34,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         locationManager=CLLocationManager()
         getCurrentLoacation()
         playerName=UserDefaults.standard.string(forKey: "PlayerName")
+       
         updateUI()
         
       
@@ -90,6 +91,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             self.startButton.isHidden = false
 
             self.locationLabel.text = " \(playerSide)"
+         
 
         }
 
@@ -101,11 +103,14 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     
     func updateUI(){
         if let name=playerName{
+            labelName.isHidden=false
             labelName.text="Hi, \(name)!"
             insertName.isHidden=true
             
         }
         else{
+            
+            
           
             insertName.isHidden=false
         }
@@ -120,6 +125,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                             gameScreen.modalPresentationStyle = .fullScreen
 
                             gameScreen.isRight = self.isRight
+                            gameScreen.playerName=self.playerName
 
                             present( gameScreen, animated: true , completion: nil)
     }
