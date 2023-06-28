@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // super.view.backgroundColor=UIColor(patternImage:UIImage(named:"background_for_main")!)
+       // super.view.backgroundColor=UIColor(patternImage:UIImage(named:"background_for_main.png")!)
        
 //        lImageView.layer.borderColor=UIColor.black.cgColor
 //        lImageView.layer.borderWidth=2.0
@@ -63,10 +63,9 @@ class GameViewController: UIViewController {
             leftName.text=playerName
             rightName.text="PC"
         }
-        rImageView.image=UIImage(named: "back_photo_2")
-        lImageView.image=UIImage(named: "back_photo_2")
-        countRight.text="0"
-        countLeft.text="0"
+        rImageView.image=UIImage(named: "back_side")
+        lImageView.image=UIImage(named: "back_side")
+        
         
     }
     
@@ -121,11 +120,12 @@ class GameViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval:1.0,repeats: true){timer in
             self.clockTime.text="\(self.oneGameCount)"
             
-    
+           
+
         if(self.oneGameCount==0){
             timer.invalidate()
-            self.rImageView.image=UIImage(named: "back_photo_2")
-            self.lImageView.image=UIImage(named: "back_photo_2")
+            self.rImageView.image=UIImage(named: "back_side")
+            self.lImageView.image=UIImage(named: "back_side")
             self.timeCount=5
             self.oneGameCount=3
            
