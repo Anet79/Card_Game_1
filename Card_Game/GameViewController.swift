@@ -79,7 +79,7 @@ class GameViewController: UIViewController {
             self.timeCount-=1
             if(self.timeCount==0){
                 timer.invalidate()
-                if( self.totalGamesRound<10){
+                if( self.totalGamesRound<=10){
                     self.gamePlay()
                 }
                 else{
