@@ -18,13 +18,13 @@ class finishGameViewController: UIViewController {
         
         
         if nameP != nil{
-              if nameP == "nil"{
+              if nameP == "no"{
                   name.text = "nil"
                   score.isHidden = true
               } else{
                   name.text = nameP
-                  if let score = score {
-                      name.text = String(format: "%d", score )}
+                  if let Score = scoreP {
+                      score.text = String(format: "%d", Score )}
               }
           }
       }

@@ -96,7 +96,7 @@ class GameViewController: UIViewController {
                         nextScreen.nameP =  self.rightName.text
                     } else{
                         nextScreen.scoreP = 0
-                        nextScreen.nameP = "nil"
+                        nextScreen.nameP = "no"
                     }
                     
                     self.present( nextScreen, animated: true , completion: nil)
