@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB78E5042A716154002AE74A /* finishGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78E5032A716154002AE74A /* finishGameViewController.swift */; };
 		CBC7DD652A485E510008EB25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DD642A485E510008EB25 /* AppDelegate.swift */; };
 		CBC7DD672A485E510008EB25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DD662A485E510008EB25 /* SceneDelegate.swift */; };
 		CBC7DD692A485E510008EB25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DD682A485E510008EB25 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB78E5032A716154002AE74A /* finishGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finishGameViewController.swift; sourceTree = "<group>"; };
 		CBC7DD612A485E510008EB25 /* Card_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Card_Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC7DD642A485E510008EB25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC7DD662A485E510008EB25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				CBC7DD6F2A485E520008EB25 /* LaunchScreen.storyboard */,
 				CBC7DD722A485E520008EB25 /* Info.plist */,
 				CBC7DD962A4897CF0008EB25 /* GameViewController.swift */,
+				CB78E5032A716154002AE74A /* finishGameViewController.swift */,
 			);
 			path = Card_Game;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				CBC7DD972A4897CF0008EB25 /* GameViewController.swift in Sources */,
 				CBC7DD692A485E510008EB25 /* ViewController.swift in Sources */,
 				CBC7DD652A485E510008EB25 /* AppDelegate.swift in Sources */,
+				CB78E5042A716154002AE74A /* finishGameViewController.swift in Sources */,
 				CBC7DD672A485E510008EB25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

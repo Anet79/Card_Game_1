@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var showRight: UILabel!
     @IBOutlet weak var countRight: UILabel!
     
- 
+    
     @IBOutlet weak var clockTime: UILabel!
     
     @IBOutlet weak var rightName: UILabel!
@@ -41,17 +41,17 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // super.view.backgroundColor=UIColor(patternImage:UIImage(named:"background_for_main.png")!)
-       
-//        lImageView.layer.borderColor=UIColor.black.cgColor
-//        lImageView.layer.borderWidth=2.0
-//        rImageView.layer.borderColor=UIColor.black.cgColor
-//        rImageView.layer.borderWidth=2.0
+        // super.view.backgroundColor=UIColor(patternImage:UIImage(named:"background_for_main.png")!)
+        
+        //        lImageView.layer.borderColor=UIColor.black.cgColor
+        //        lImageView.layer.borderWidth=2.0
+        //        rImageView.layer.borderColor=UIColor.black.cgColor
+        //        rImageView.layer.borderWidth=2.0
         initSides()
         startGame()
-     
         
-
+        
+        
     }
     func initSides(){
         if(isRight==true){
@@ -70,7 +70,7 @@ class GameViewController: UIViewController {
     }
     
     
-
+    
     func startGame(){
         self.totalGamesRound+=1
         
@@ -79,15 +79,39 @@ class GameViewController: UIViewController {
             self.timeCount-=1
             if(self.timeCount==0){
                 timer.invalidate()
-                self.gamePlay()
-              
+                if( self.totalGamesRound<10){
+                    self.gamePlay()
+                }
+                else{
+                    
+                    let nextScreen =  self.storyboard?.instantiateViewController(identifier: "finishGameViewController") as! finishGameViewController
+                    nextScreen.modalPresentationStyle = .fullScreen
+                    
+                   
+                    if self.leftScore >  self.rightScore{
+                        nextScreen.scoreP =  self.leftScore
+                        nextScreen.nameP =  self.leftName.text
+                    } else if  self.leftScore <  self.rightScore{
+                        nextScreen.scoreP =  self.rightScore
+                        nextScreen.nameP =  self.rightName.text
+                    } else{
+                        nextScreen.scoreP = 0
+                        nextScreen.nameP = "nil"
+                    }
+                    
+                    self.present( nextScreen, animated: true , completion: nil)
+                }
+                
             }
             
             
-            
         }
-
+        
+        
+        
     }
+
+    
     
     func gamePlay(){
         
